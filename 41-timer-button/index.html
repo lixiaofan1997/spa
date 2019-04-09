@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>定时器按钮测试页面</title>
+  <link rel="stylesheet" href="timer-button.css">
+  <link rel="icon" href="https://i.wangding.in/favicon.ico" sizes="48x48" type="image/png">
+  <style>
+  .mian{
+    width:200px;
+    height:200px;
+    //background:
+  }
+  </style>
+  
+</head>
+<body>
+<div class="main"></div>
+<input type="button" class="add-btn" value="add timer-btn">
+<input type="button" class="del-btn" value="del timer-btn">
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="timer-button.js"></script>
+<script>
+$(function(){
+    var $btnAdd=$('input.add-btn');
+    var $btnDel=$('input.del-btn');
+    $btnAdd.click(
+      function(){
+        $timerBtn.init();
+      }
+    );
+    $btnDel.click(
+      function(){
+        $timerBtn.remove();
+      }
+    );  
+});
+</script>
+</body>
+</html>
