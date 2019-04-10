@@ -9,32 +9,46 @@
   .mian{
     width:200px;
     height:200px;
+    margin:0 auto;
     //background:
   }
   </style>
   
 </head>
 <body>
-<div class="main"></div>
-<input type="button" class="add-btn" value="add timer-btn">
-<input type="button" class="del-btn" value="del timer-btn">
+<input type="button" class="add-btn1" value="add timer button1">
+<input type="button" class="add-btn2" value="add timer button2">
+<div class="main1"></div>
+<div class="main2"></div>
 <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="timer-button.js"></script>
 <script>
 $(function(){
-    var $btnAdd=$('input.add-btn');
-    var $btnDel=$('input.del-btn');
-    $btnAdd.click(
-      function(){
-        $timerBtn.init();
-      }
-    );
-    $btnDel.click(
-      function(){
-        $timerBtn.remove();
-      }
-    );  
-});
+    var $btnAdd1=$('input.add-btn1'),
+        $btnAdd2=$('input.add-btn2');
+    $btnAdd1.click( function(){
+        var btn1=new TimerBtn();
+        btn1.init({
+          container:'.main1',
+          title:'发送短信',
+          time:10,
+          clickHandle:function(){
+            alert('btn1 click');
+          }
+        })
+    });
+    $btnAdd2.click(function(){
+        var btn2=new TimerBtn();
+        btn2.init({
+          container:'.main2',
+          title:'发送短信',
+          time:10,
+          clickHandle:function(){
+            alert('btn2 click');
+          }
+        });
+    })
+});   
 </script>
 </body>
 </html>

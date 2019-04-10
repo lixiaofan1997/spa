@@ -1,30 +1,69 @@
-/*export $timerBtn $btn*/
-var  $timerBtn=(function(){
-  var n=6;
-  var init=function(){
-    var $container = $('.main');
-    var DOM='<input type="button" class="timer-button" value="同意(6s)" disabled>';
+/*export TimerBtn*/
+function TimerBtn(){
+  var cfg={
+    container:'.main',
+    title:'确定' ,
+    time:9,
+    enable:false,
+    clickHandler:null 
+  };
+  var n=cfg.time;
+  this.init=function(conf){//conf参数
+    $.extend(cfg,conf);
+    var $container= $(cfg.container);
+    var DOM='<input type="button" class="timer-button" value="'+cfg.title+'('+n+'s)">';
     $container.html(DOM);
     var $btnAgree=$container.find('.timer-button');
     var timer=window.setInterval(function(){
       n--; 
-      if(n==0){
+      if(n===0){
         window.clearInterval(timer);
         $btnAgree.removeAttr('disabled');
-        $btnAgree.val('同意');
+        $btnAgree.val(cfg.title);
       }else{
-        $btnAgree.val('同意('+n+'s)');
+        $btnAgree.val(cfg.title+'('+n+'s)');
       }
     },1000);
     $btnAgree.click(function(){
-      alert('SPA!10-timer-button');
+      cfg.clickHandler();
     });
+    return $btnAgree;
   };
-  var remove=function(){
-    var $btn=$('.main').find('.timer-button');
-    //var $container=$('.main');
-    $btn.remove();
-  };
-  return {init:init,remove:remove};//键
+}  
+  
+  //return {init:init};//键
+  /*
+   *var $timerbtn={
+   init:function(){
+      
+      },
+   remove:function{
+      
+     }   
+   }
+    */
+  /*
+     var $timerbtn={
+     $timerbtn.init=function(){
+
+     }
+   }
+   var $timerbtn.remove=function(){
+
+   }
+
+
 }());
- 
+function TimerBtn(conf){
+  var cfg={
+    container:'.main',
+    title:'预定' ,
+    timer:9,
+    enable:false,
+    clickHandle(): 
+
+  }
+  this.init=function(){
+
+  }
+} */
