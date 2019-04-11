@@ -1,3 +1,4 @@
-$(function(){
-  console.log('hello world!');
-});
+/*global console*/
+//$(function(){
+//  console.log('hello world!');
+//});
