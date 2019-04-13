@@ -16,14 +16,27 @@
   
 </head>
 <body>
-<input type="button" class="add-btn1" value="add timer button1">
-<input type="button" class="add-btn2" value="add timer button2">
+<input type="button" class="add-btn" value="add timer button">
+<input type="button" class="del-btn" value="del timer button">
 <div class="main1"></div>
 <div class="main2"></div>
 <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="timer-button.js"></script>
 <script>
 $(function(){
+    var $btnAdd=$('.add-btn'),
+        $btnDel=$('.del-btn');
+        $btnAdd.click(function(){
+          $timerBtn.init({
+            container:'.main1',
+            title:'确定',
+            time:8
+          }); 
+        });
+        $btnDel.click(function(){
+          $timerBtn.remove();
+        });
+    /*多个添加按钮
     var $btnAdd1=$('input.add-btn1'),
         $btnAdd2=$('input.add-btn2');
     $btnAdd1.click( function(){
@@ -47,7 +60,7 @@ $(function(){
             alert('btn2 click');
           }
         });
-    })
+    })*/
 });   
 </script>
 </body>
