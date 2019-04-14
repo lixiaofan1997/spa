@@ -1,0 +1,27 @@
+.main{
+  text-align:center;
+}
+
+.main input{
+  height:15px;
+}
+.main #password{
+  width:150px;
+}
+.main #btn{
+  font-size:12px;
+  height:20px;
+  width:50px;
+}
+
+.main #pwd{
+  width: 150px;
+  z-index: -10;
+  left:-173px;
+  position: relative;
+  border:white;
+}
+img{
+  width:20px;
+  height:20px;
+}
