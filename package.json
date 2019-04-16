@@ -16,7 +16,7 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-eslint": "^21.0.0",
     "grunt-htmlhint": "^0.9.13"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lixiaofan1997/spa.git"
