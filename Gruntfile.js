@@ -5,7 +5,17 @@ module.exports = function(grunt){
       options:{
         configFile:'.eslintrc.json'
       },
-      target:['./10-timer-button/main.js','./11-password-visual/main.js','./12-range/main.js','./13-progress/main.js','./00-template/main.js','./31-echart/main.js','./32-map/index.html','./33-highlight/main.js','./34-excel/main.js','./41-timer-button/timer-button.js','./42-password-visual/main.js']
+      target:[
+        './10-timer-button/main.js',
+        './11-password-visual/main.js',
+        './12-range/main.js',
+        './13-progress/main.js',
+        './31-echart/main.js',
+        './32-map/index.html',
+        './33-highlight/main.js',
+        './34-excel/main.js',
+        './41-timer-button/timer-button.js',
+        './42-password-visual/main.js']
     },
     csslint:{
       options:{
@@ -34,8 +44,8 @@ module.exports = function(grunt){
           'dist/32-map.html':'./32-map/index.html',
           'dist/33-highlight.html':'./33-highlight/index.html',
           'dist/34-excel.html':'./34-excel/index.html',
-          'dist/42-password-visual.html':'./42-password-visual/index.html'
-          'dist/41-timer-button.html':'./41-timer-button/index.html',
+          'dist/42-password-visual.html':'./42-password-visual/index.html',
+          'dist/41-timer-button.html':'./41-timer-button/index.html'
          }                   
      }  
     },

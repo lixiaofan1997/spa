@@ -1,4 +1,4 @@
-/*export TimerBtn*/
+/*export $timerBtn*/
 
 var $timerBtn = (function(){
   var init = function(cfg){
