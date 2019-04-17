@@ -4,7 +4,7 @@ $(function(){
   var yData=[];
   //create ydata xdata;
   var myChart= echarts.init($('.main')[0]);
-  for (var p=0;p<1;p+=0.1)
+  for (var p=0;p<=1;p=p+0.1)
   {
     xData.push(p);
     yData.push(h(p));
@@ -27,7 +27,7 @@ $(function(){
     },
     yAxis: {},
     series: [{
-      name: '销量',
+      name: '二进制熵函数曲线',
       type: 'line',
       smooth:true,
       data: yData,
