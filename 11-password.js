@@ -1,0 +1,1 @@
+$(function(){var n=$("#pwd"),u=$("#eye"),e=$("#truepwd");u.mouseover(function(){e.css("z-index","10")}),u.mouseout(function(){e.css("z-index","-10")}),n.bind("input",function(){e.val(n.val())})});

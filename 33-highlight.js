@@ -1,0 +1,1 @@
+$(function(){$('input[type="button"]').click(function(){var i=$('<div><pre class="javascript"></pre><button class="del">删除</button></div>');i.find("pre").html($(".code").val()),$("div.main").append(i),hljs.highlightBlock(i[0]),i.find(".del").on("click",function(){i.remove()})})});

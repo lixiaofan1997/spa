@@ -1,0 +1,1 @@
+$(function(){var t=0,n=0,c=$("#start-button"),r=$("#stop-button"),a=$("#reset-button"),e=$("#progress");c.click(function(){t=setInterval(function(){n<=100?e.attr("value",n++):window.clearInterval(t)},100)}),r.click(function(){window.clearInterval(t)}),a.click(function(){e.attr("value",n=0),window.clearInterval(t)})});
